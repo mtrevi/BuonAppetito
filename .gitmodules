@@ -1,0 +1,6 @@
+[submodule "ext/TextProcessingLib"]
+	path = ext/TextProcessingLib
+	url = https://github.com/xarabas/TextProcessingLib.git
+[submodule "ext/GensimSemanticLib"]
+	path = ext/GensimSemanticLib
+	url = https://github.com/xarabas/GensimSemanticLib.git
