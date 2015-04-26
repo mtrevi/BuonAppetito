@@ -4,3 +4,6 @@
 [submodule "ext/GensimSemanticLib"]
 	path = ext/GensimSemanticLib
 	url = https://github.com/xarabas/GensimSemanticLib.git
+[submodule "ext/EmotionsLIWClib"]
+	path = ext/EmotionsLIWClib
+	url = https://github.com/xarabas/EmotionsLIWClib.git
