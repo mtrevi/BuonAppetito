@@ -1,0 +1,347 @@
+%!TEX root = ../tist-paper.tex
+\section{Analysis} \label{sec:analysis} 
+% ----------------------------------- %
+\todo{pasted the old old section}
+\todo{
+\begin{itemize} % \Checkmark or \XSolidBrush
+ 	\item[\XSolidBrush] explain + overview of the dataset (no. business, no. users, no. reviews, cities, size, \dots)
+    \item[\XSolidBrush] add stats for each reviews (avg. length, avg. no. sentiments, avg. no. food items, \dots)
+    \item[\XSolidBrush] overview of sentiments (LIWC dictionary vs. TextBlob, review- vs. sentence-level, \dots)
+    \item[\XSolidBrush] food recognition (dishes vs. ingredetients, explain graph, advantages, performance, \dots)
+    \item[\XSolidBrush] taste changes over time (user/business profile, check variation over time, over cities, over cultures, \dots)
+\end{itemize}
+}
+% 
+In this Section we describe how we built our dataset and present some interesting results aimed at validating the soundness of the process.
+First of all, we will describe the dimensions along which we processed the Yelp reviews: we are interested in the sentiment, the social environment and the food.
+Secondly, we will analyze each dimension separately and, finally, we will combine all dimensions, highlighting interesting relationships between them.
+
+\subsection{Dimensions of the Analysis}
+Venue reviews could be analyzed under different points of view, since many interesting aspects could be extracted from the text of the reviews. 
+
+Since we are interested in recommending personalized menus for restaurants, \emph{food} is certainly a dimension we would like to explore. We aim at detecting popular foods, understanding if and how food varies in terms of category of restaurant (\eg\, Mexican, Japanese, Italian, \etc), and extracting frequent combination of foods, thus looking for menus.
+
+Food alone is not enough. Reviews have a \emph{sentiment}, that is, they could be positive reviews or negative reviews. 
+Sentiment is therefore an important dimension to look into, especially related to the rating of the reviews (\ie, stars that the person assigned to the place).
+
+Finally, even if not essential as the previous dimensions, \emph{social environment}, \ie\ the people involved in the review, is an interesting dimension for the analysis. Indeed, the social context influences the behavior of people during a meal. For example, people may order different menus or have different expectations when dining with the family, with friends or with colleagues. Therefore, we expect that the content of the review may depend on this factor.
+
+To summarize, the dimensions we will consider are:
+\begin{itemize}
+	\item \emph{Sentiment $S$}: amount in which the text is conceiving a positive or negative judgement;
+	\item \emph{Food $F$}: set of dishes or food present in the review;
+	\item \emph{Social Environment $E$}: relationships between people, measured by the degree of closeness (\eg\ a partner is closer, whereas a colleague is distant).
+\end{itemize}
+
+We will now analyze each dimension separately by highlighting how we extracted it from the text and showing interesting findings for each one of them.
+
+\subsection{Preprocessing}
+Since reviews are written in natural language, we perform a preprocessing aimed at reducing noise and sparsity.
+First of all, we split a review in sentences. For each sentence, we remove stopwords such as prepositions (\eg, ``to'', ``for'', \etc), conjunctions (\eg, ``and'', ``or'', \etc), pronouns and other common words.
+We then lemmatize all words in the sentence in order to remove the number of words and therefore the sparsity.
+\todo{Michele: check}
+
+\subsection{Sentiment $S$}
+Sentiment analysis is the use of Natural Language Processing to identify subjective information from text.
+In this work, we are interested in understanding the \emph{polarity} of a text, \ie\ the amount in which it is positive or negative.
+
+There are many method to do sentiment analysis. We will adopt a simple mechanism that relies in recognizing \emph{polar words}, \ie\ words that convey a positive or negative emotion, and use them to score the text.
+We use LIWC 2007 \cite{pennebaker2001linguistic} dictionary of sentimentally-annotated words. Each word has a number of facets connected to it (\eg, grammatical features, topics, \etc). Among all facets, we focus on those about polarity.
+
+Given a text, we are able to score the positiveness by counting the occurrence of polarity words in it. The sentiment score of a text is given by Equation \ref{eq:sentiment}:
+
+\begin{equation}
+\label{eq:sentiment}
+	S = \frac{p - n}{p + n}
+\end{equation}
+
+where $p$ is the number of positive words, and $n$ is the number of negative words.
+
+\subsubsection{Sentence- vs. Review-level Sentiment Analysis}
+\label{sec:sentimentSentence}
+
+\begin{table}
+\begin{center}
+\pgfplotstabletypeset[
+	col sep=tab,
+	columns={aggregation,negative,mixed, positive},
+	columns/aggregation/.style={
+		column name=,
+		column type={l |},
+		string type},
+	columns/negative/.style={
+		column name={$S = -1$},
+		column type={l},
+		dec sep align,
+		preproc/expr={100*##1},
+		postproc cell content/.append code={
+			\ifnum1=\pgfplotstablepartno
+				\pgfkeysalso{@cell content/.add={}{\%}}%
+			\fi
+		},
+		fixed zerofill},
+	columns/mixed/.style={
+		column name=$-1 < S < +1$,
+		column type={l},
+		dec sep align,
+		preproc/expr={100*##1},
+		postproc cell content/.append code={
+			\ifnum1=\pgfplotstablepartno
+				\pgfkeysalso{@cell content/.add={}{\%}}%
+			\fi
+		},
+		fixed zerofill},
+	columns/positive/.style={
+		column name={$S = +1$},
+		column type={l},
+		dec sep align,
+		preproc/expr={100*##1},
+		postproc cell content/.append code={
+			\ifnum1=\pgfplotstablepartno
+				\pgfkeysalso{@cell content/.add={}{\%}}%
+			\fi
+		},
+		fixed zerofill},
+	every head row/.style={
+		after row=\hline},
+	after row=\hline,
+	every last row/.style={
+		after row={}}
+]{data/sentence_vs_review_sentiment.csv}
+\caption{Comparison of sentiment $S$ in review- and sentence-level aggregation.}
+\label{tab:sentence_vs_review_sentiment}
+\end{center}
+\end{table}
+
+The first question we ask is whether dividing the text of the reviews in sentences affects the results. To answer this, we compare the distribution of sentiment in the whole review and the one of its sentences.
+
+Table \ref{tab:sentence_vs_review_sentiment} shows the comparison between the two cases. We show three cases: 
+\begin{inparaenum}
+	\item \emph{negative}, when $S = -1$;
+	\item \emph{mixed}, when $0<S<1$; and
+	\item \emph{positive}, when $S = 1$.
+\end{inparaenum}
+We can see that, in the case of sentiment of sentences, there is a majority of positive and negative, while review sentiments are more mixed. Indeed, mixed sentiments occur only in $12\%$ of the sentences, against $43\%$ in the case of review-level aggregation.
+
+We conclude that splitting by sentence allows us to get a more precise, clean, and localized characterization of the text.
+
+\subsubsection{Sentiment and Ratings}
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+	only marks,
+	xlabel=Sentiment $S$,
+	ylabel=Rating]
+	\addplot+[
+		scatter,
+		visualization depends on={\thisrow{count} ^ 0.50 / 15 \as \perpointmarksize},
+		scatter/@pre marker code/.append style={/tikz/mark size=\perpointmarksize}
+	] table[x=valence,y=stars] {data/review_stars_vs_sentiment_rounded.csv};
+\end{axis}
+\end{tikzpicture}
+
+\caption{Comparison between sentiment $S$ and rating $R$ (expressed in number of stars, $1$ is worse, $5$ is best). The area of the circle represents the amount of reviews.}
+\label{fig:review_stars_vs_sentiment_rounded}
+\end{center}
+\end{figure}
+
+
+It is natural to expect that the sentiment of a review is related to the ratings given by users.
+Figure \ref{fig:review_stars_vs_sentiment_rounded} shows the distribution of sentiments for each rating. 
+We can see that the amount of positive reviews decreases and that the amount of negative reviews decreases with the rating. 
+The tendency is towards positive reviews, which is a very well known effect called \emph{Pollyanna principle} \cite{boucher1969pollyanna}.
+
+A small amount of purely negative reviews ($S = -1$) are always present, even for highly-rated reviews. Observing such reviews manually, we understand that they are not related to the place itself, but rather to contingencies. 
+For example, the following reviewer is disappointed that a cafe is closed, but gave the maximum review anyway:
+\begin{quote}
+	[...] I stopped by two days ago unaware that they had closed.  I am severely bummed. This place is irreplaceable! [...] 
+\end{quote}
+
+%%%%%%%%%%%%%
+\subsection{Food $F$}
+Food, along with the quality of service, is the most important aspect of restaurant and cafe reviews. People write about food in their reviews and often share their favorite menu at a particular place. Extracting food from text is a difficult task due to the large amount of ingredients and local expressions.
+
+We implemented a basic method which captures the most popular foods in reviews based on a dictionary extracted from three publicly available sources:
+\begin{itemize}
+	\item
+	\emph{Oregon State University Food Glossary}\footnote{\url{http://food.oregonstate.edu/}}: this is a multi-language glossary of food which contains ingredients as well as scientific names. Using a web-crawler, we built a dictionary based on the titles of the food pages in the glossary.
+	\item
+	\emph{WordNet}\footnote{\url{http://wordnet.princeton.edu/}}: WordNet is a large lexical database of English. We built a dictionary containing all nouns in the ``food'' group. 
+	\item
+	\emph{BBC Food}\footnote{\url{http://www.bbc.co.uk/food/}}: BBC Food is a web portal of recipes and ingredients. It contains a large amount of recipes written in English. We crawled the pages and extracted all ingredients and recipes. For each page, we crawled the displayed image and the description. Also, for each recipe, we were able to crawl all its ingredients. The final dictionary consists of around $9000$ items.
+\end{itemize}
+
+After building the dictionary, we lemmatize all words, we manually remove some noise and we find such words in the text of the reviews.
+
+\subsubsection{Statistics}
+\begin{table}
+\begin{center}
+	\generateFoodTable{data/food.csv}{5}{Food}
+\caption{Most frequent foods in the dataset.}
+\label{tab:food}
+\end{center}
+\end{table}
+
+\begin{table}
+\begin{center}
+	\generateFoodTable{data/food_by_category/American (New).tsv}{10}{American}
+	\quad
+	\generateFoodTable{data/food_by_category/Italian.tsv}{10}{Italian}
+	\\[0.5cm]
+	\generateFoodTable{data/food_by_category/Mexican.tsv}{10}{Mexican}
+	\quad
+	\generateFoodTable{data/food_by_category/Chinese.tsv}{10}{Chinese}
+\caption{Most frequent foods for various type of restaurants.}
+\label{tab:food_by_category}
+\end{center}
+\end{table}
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\begin{semilogyaxis}[
+	scatter,
+	only marks,
+	restrict x to domain=0:80,
+	xlabel=Number of foods in the review ($N$),
+	ylabel=Number of reviews with $N$ foods (log)],
+	\addplot table [x=food_per_review,y=count] {data/food_per_review.csv};
+\end{semilogyaxis}
+\end{tikzpicture}
+\caption{Number of food per reviews.}
+\label{fig:food_per_review}
+\end{center}
+\end{figure}
+
+%\begin{figure}
+%\begin{center}
+%\begin{tikzpicture}
+%\begin{axis}[
+%	restrict x to domain=0:100,
+%	enlargelimits=0.1,
+%	ybar,
+%	xlabel=Number of foods in the review ($N$),
+%	ylabel=Number of reviews with $N$ foods],
+%	\addplot table [x=food_per_review,y=count] {data/food_per_review.csv};
+%\end{axis}
+%\end{tikzpicture}
+%\caption{Number of food per reviews.}
+%\label{fig:food_per_review}
+%\end{center}
+%\end{figure}
+
+
+Table \ref{tab:food} shows the most frequent food words in the dataset, alongside with the percentage of occurrences. A breakdown by type of restaurant is provided in Table \ref{tab:food_by_category}. We can see that the food which appear in the list are indeed typical of the particular cuisine.
+
+As for the coverage of the foods in the reviews, on average, we detect $4.7$ food words per review. Figure \ref{fig:food_per_review} shows the head of the distribution of food per review. The number of food per review is uniform across ratings and types of restaurants.
+
+
+%%%%%%%%%%%%%
+\subsection{Social Environment $E$}
+\todo{ How to extract the dimensions from reviews}
+
+\todo{ Show validity of feature by plotting distributions. Show examples}
+
+
+%%%%%%%%%%%%%
+\subsection{Food and Sentiment}
+Having inspected every dimension by itself, it is now time to analyze dimensions jointly. We start by analyzing maybe the most interesting one for our goal: sentiment and food. 
+
+\subsubsection{Sentence-level Food Sentiment}
+We observed in Section \ref{sec:sentimentSentence} that extracting sentiment from sentences gives a more localized and clear signal than extracting it from the whole review text. 
+In addition, being able to detect the sentiment of particular sentences in the reviews allows us to better connect the sentiment to the food words. 
+It is indeed quite common ($57\%$ of reviews, see Table \ref{tab:sentence_vs_review_sentiment}) for people to write a mixed-sentiment reviews. This often happens when reviewing more than one dish, as for example:
+\begin{quote}
+	[...] Pizza crust \& toppings are excellent. However the pizza sauce was too salty. [...]
+\end{quote}
+
+Bearing this in mind, we assign to each occurrence of a food word the sentiment $S$ of the sentence it belongs.
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+	restrict x to domain=-1:+1,
+	enlargelimits=0.1,
+	ybar,
+	bar width=5pt,
+	xmin=-1,
+	xmax=+1,
+	xlabel={Kendall $\tau$},
+	ylabel={Number of restaurants with $\tau$}
+]
+	\addplot table [x=kendall_tau,y=count] {data/kendall_tau_frequent_rounded.csv};
+\end{axis}
+\end{tikzpicture}
+\caption{Distribution of Kendall $\tau$.}
+\label{fig:kendall_tau_frequent_rounded}
+\end{center}
+\end{figure}
+
+In order to evaluate the way in which we assign sentiment to food words, we compare it to the ratings given by users.
+We build the ranking of food words based solely on the sentence-level sentiments $r_S$, and we compare it to the ranking we would obtain using the ratings of the reviews $r_R$. 
+
+First of all, we score each food by summing up the contributions of its occurrences: for $r_S$, each sentence containing the food contributes with its sentiment, for $r_R$ each review containing the food contributes with its rating.
+Given the score of the food, we compute the two rankings $r_S$ and $r_R$.
+Since the preference of food may depend on the particular restaurant, we build $r_S$ and $r_R$ for each restaurant that has been reviewed at least $N = 20$ times.
+
+We then compare the rankings using Kendall rank correlation coefficient $\tau$ \cite{kendall1938new}. Figure \ref{fig:kendall_tau_frequent_rounded} shows the distribution of  the value of the coefficient of the restaurants. We can see that the two rankings show a slight agreement, with an average $tau$ of \todo{PUT VALUE}.
+
+%The ranking of food we obtain for each restaurant is a signal of user's taste, since it is derived from the reviews.
+
+\subsection{From Dishes to Menus}
+In the previous section we built a ranking of dishes for each restaurant based on sentence-level sentiment analysis. A ranking of food could be already useful by itself, since it could be used to recommend to customers the best dishes for a particular place. 
+However, many restaurants provide a menu, not just individual dishes.
+A good menu is not only composed by good dishes, but relies in the harmonic combination of flavors,
+It is therefore natural to expand our analysis towards menus.
+
+A menu is a sequence of dishes which are served during a meal. Many cuisine specify an ordering of dishes. However, for simplicity, we will discard such orderings, although it may be possible to infer them from the reviews.
+In this work, a menu is simply a set of dishes. 
+We are interested in detecting \emph{good} menus. The meaning of the word ``good'' can be multiple. 
+We will start by extracting \emph{frequent} menus, \ie\ menus that people often choose, and expand our algorithms to consider the quality of menus, intended as people's opinion.
+
+\subsubsection{Extracting Frequent Menus}
+Frequent Itemset Mining is the task of extracting sets of items which occur frequently in a database. The Apriori algorithm \cite{agrawal1994fast} is one of the most known algorithm to perform this task.
+It receives as input a set of sets $T$ , which we call transactions, and a number,$minSup \in [0,1]$, and returns the sets which are subset of at least $minSup \cdot |T|$ elements of $T$.
+Apriori appears as the natural choice for our problem of detecting frequent menus. 
+
+The set of transactions $T$ contains one set for each review, containing the food words that appear in it. 
+We ran Apriori with $minSup = 0.05$ and extract the most popular item sets for each restaurant category.
+The results are displayed in the first column of Table \todo{ref}
+
+\subsubsection{Extracting Frequent and Positive Menus}
+Until this point, we completely discarded a very useful resource: people's opinion. We are indeed interested in extracting not only menus that occur frequently, but also that people like.
+
+We use an extension of the Apriori algorithm \cite{delgado2003fuzzy} that deals with the case in which the transactions in $T$ are \emph{fuzzy}. Fuzzy sets are sets whose elements have degrees of membership.
+The algorithm is designed to find those itemsets that are frequent in the sense of fuzzy sets, \ie\ those that are strong members of many transactions.
+
+This algorithm is suitable for our case if we interpret set membership as preference. As in the case of frequent menus, transactions are reviews and they contain the food words that appear in them. What we add in this case is the fact that food words belong to the transaction depending on their sentiment.
+For each review, the membership of each food word is the averaged sentiment that it receives in the sentences, normalized to fall in the interval $[0,1]$. Different food words in the same transaction may have different degrees of membership. If a food has a negative sentiment, it will have membership of $0$. On the contrary, if it has fully positive sentiment, it will have membership of $1$. 
+Note that full negative sentiment is equivalent to the food never occurring in the review. Discarding food that people dislike does not change our approach since we are interested in the menu that people liked most.
+
+Having built the fuzzy transactions from the reviews, we run the fuzzy version of Apriori, with again $minSup = 0.05$.
+The results are displayed in the second column of Table \todo{ref}
+
+
+In order to compare the two versions of Apriori, we rank the item sets by their support and compare the two rankings using Kendall rank correlation coefficient. The results are show in Figure \ref{fig:kendall_tau_apriori_rounded}.
+\todo{Explain}
+
+
+\subsection{All together}
+\todo{Put all features in a single matrix. Is the matrix sparse?}
+
+\todo{
+Analysis and statistics on the dataset:
+\begin{itemize}
+\item Relation with reviews, starts 
+\item About Check-in
+\item What about the Sex guessed by the name of the user? We should ask Eduardo about the DB he knows about this.
+\note{If we do not use the gender, this is not really useful}
+\end{itemize}
+}
+
+
+
+
