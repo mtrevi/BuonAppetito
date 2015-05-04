@@ -1,0 +1,63 @@
+\documentclass{sig-alternate}
+\input{macros}
+% \cmd{}
+
+\begin{document}
+% --- Author Metadata here ---
+%\conferenceinfo{SIGIR'14}{New York, NY, US - \textbf{Paper submitted for confidential review.}}
+\CopyrightYear{2014}
+% --- End of Author Metadata ---
+
+\title{Make up an Appetite:
+Recommending Personalized Menu}
+%\titlenote{Research conducted on an internship at Yahoo Labs Barcelona.}}
+
+%\subtitle{[Extended Abstract]
+%\titlenote{A full version of this paper is available as
+%\textit{Author's Guide to Preparing ACM SIG Proceedings Using
+%\LaTeX$2_\epsilon$\ and BibTeX} at
+%\texttt{www.acm.org/eaddress.htm}}}
+
+\numberofauthors{2}
+\author{
+\alignauthor Michele Trevisiol\\
+\email{\large trevi@yahoo-inc.com}
+\alignauthor Luca Chiarandini \\
+\email{{\large chiarluc@yahoo-inc.com}}
+\sharedaffiliation
+  \begin{tabular}{c}
+	\affaddr{Web Research Group}\\
+	\affaddr{Universitat Pompeu Fabra}\\
+	\affaddr{T\`anger 122-140, 08018}\\
+	\affaddr{Barcelona, Spain}
+  \end{tabular}
+}
+
+\maketitle
+
+\begin{abstract}
+here
+\end{abstract}
+
+
+\category{H.4}{Information Systems Applications}{Miscellaneous}
+\keywords{Recommender System, Menu Builder, User Emotions}
+
+
+\input{sec/introduction}
+\note{Perché' non aggiungere related work in una sezione separata?}
+\input{sec/overview}
+\input{sec/analysis}
+\input{sec/experiments}
+\input{sec/conclusions}
+
+%\section*{Acknowledgments}
+%This research is partially supported by the Ministry of Science and Innovation of Spain.
+
+%\pagebreak
+\bibliographystyle{abbrv}
+
+\bibliography{yelpaper,yelpaper_luca}  % sigproc.bib is the name of the Bibliography in this case
+
+\end{document}
+

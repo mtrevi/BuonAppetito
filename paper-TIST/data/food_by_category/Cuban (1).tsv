@@ -1,0 +1,439 @@
+food	count
+rice	94
+black bean	74
+dessert	65
+pork	56
+plantain	56
+chicken	51
+bean	46
+mojito	45
+sauce	40
+bread	37
+cuban sandwich	36
+flan	31
+sandwich	29
+meat	29
+onion	29
+sangria	26
+chip	26
+beef	25
+fritter	24
+water	24
+fried plantain	23
+soup	22
+garlic	22
+dip	21
+pulled pork	21
+tamale	20
+salad	19
+shrimp	19
+wine	18
+spicy	18
+coffee	17
+potato	16
+avocado	15
+buffet	15
+chorizo	14
+lime	13
+fish	13
+white rice	13
+ham	13
+steak	12
+paella	12
+chocolate	11
+tomato	11
+beer	11
+tamal	11
+spice	11
+croquette	10
+creamy	10
+mango	10
+soda	10
+seafood	10
+salt	10
+rum	10
+bread pudding	10
+ceviche	9
+salsa	9
+banana	9
+split	9
+guava	8
+bacon	8
+cocktail	8
+cheese	8
+sweet potato	8
+arroz con pollo	8
+sugar	8
+vegetable	8
+savory	7
+filling	7
+veggie	7
+coconut	7
+eggplant	7
+supper	7
+leftover	7
+stick	6
+olive	6
+starter	6
+pickle	6
+citrus	6
+alcohol	6
+bell pepper	6
+pumpkin	6
+garbanzo	6
+butter	6
+pepper	6
+corn	6
+topped	6
+difference	5
+asparagus	5
+fried chicken	5
+ketchup	5
+side dish	5
+lettuce	5
+almond	5
+mint	5
+dipping sauce	5
+squash	5
+rice pudding	5
+tongue	5
+tomato sauce	5
+roll	5
+round	4
+seasoning	4
+sweet onion	4
+heart	4
+pumpkin soup	4
+cumin	4
+roasted pork	4
+brisket	4
+ground beef	4
+garlic sauce	4
+salmon	4
+pineapple	4
+espresso	4
+crackling	4
+caper	4
+yellow rice	4
+red wine	4
+lentil	4
+cilantro	4
+oxtail	4
+lobster	4
+pea	4
+bisque	4
+curry	4
+mustard	4
+milk	3
+marinade	3
+pancake	3
+chicken soup	3
+cinnamon	3
+french fry	3
+guacamole	3
+caipirinha	3
+garnish	3
+candy bar	3
+sour	3
+chayote	3
+honey	3
+carrot	3
+chicken rice	3
+lime sauce	3
+pesto	3
+salsa verde	3
+tortilla	3
+raisin	3
+sherry	3
+cheesecake	3
+calamari	3
+molasses	3
+gem	3
+caramel	3
+mashed potato	3
+grain	3
+cream cheese	3
+pot roast	3
+chicken croquette	3
+bean dip	3
+saffron	3
+roasted	3
+cut meat	3
+mayo	3
+avocado salad	3
+dark rum	3
+gazpacho	3
+curry sauce	3
+lime juice	3
+grilled onion	3
+lime pie	2
+chicken noodle soup	2
+margarita	2
+manchego cheese	2
+corn fritter	2
+skin	2
+smothered onion	2
+comfort food	2
+fried banana	2
+libation	2
+oxtail stew	2
+spiced	2
+sake	2
+chicken sandwich	2
+mush	2
+dressing	2
+chocolate sauce	2
+chardonnay	2
+potage	2
+potato chip	2
+fried potato	2
+ham sandwich	2
+fudge sauce	2
+fudge	2
+pizza	2
+blood	2
+cabbage	2
+batter	2
+thigh	2
+fresh tomato	2
+sweet pepper	2
+tilapia	2
+jerk chicken	2
+cassava	2
+garlic oil	2
+bitter	2
+manchego	2
+soft drink	2
+rag	2
+slaw	2
+juice	2
+red pepper	2
+zucchini	2
+flank steak	2
+booze	2
+snack	2
+starch	2
+romesco sauce	2
+roast pork	2
+tres lech cake	2
+grilled chicken	2
+swallow	2
+orange	2
+chili	2
+sweet potato chip	2
+vanilla	2
+hot sauce	2
+papaya	2
+fruit	2
+cucumber	2
+vinaigrette	2
+morsel	2
+sour cream	2
+pigeon pea	2
+fish fillet	2
+caramel sauce	2
+cream sauce	2
+coke	2
+cake	2
+pie	2
+spicy sauce	2
+meatball	2
+dulce de leche	2
+whipped cream	2
+dulce	2
+beverage	2
+chicken breast	2
+rice dish	1
+green pepper	1
+parmesan	1
+grape	1
+pork shoulder	1
+vegetable broth	1
+salt pork	1
+ham hock	1
+pork bean	1
+tea	1
+rum cocktail	1
+burger	1
+fresh mint	1
+mornay sauce	1
+bird	1
+leg	1
+herb	1
+mozzarella	1
+vinegar	1
+cabbage salad	1
+aioli	1
+round drink	1
+cookie	1
+potato latke	1
+radish	1
+duck	1
+cuba libre	1
+almond soup	1
+grand marnier	1
+square meal	1
+crab	1
+humus	1
+blueberry sauce	1
+edible	1
+malt	1
+alcoholic drink	1
+fruit juice	1
+chilly	1
+vegetable soup	1
+roasted tomato	1
+roasted almond	1
+chocolate dessert	1
+neck	1
+egg	1
+granny smith	1
+iced tea	1
+dough	1
+shake	1
+key lime pie	1
+root vegetable	1
+rosewater	1
+thyme	1
+risotto	1
+feast	1
+stock	1
+rosemary	1
+light cream	1
+blueberry muffin	1
+scratching	1
+ice cream	1
+mate	1
+swiss cheese	1
+white fish	1
+italian dressing	1
+toasted walnut	1
+chilli	1
+compote	1
+macadamia nut	1
+rack	1
+takeout	1
+sweet potato fritter	1
+draft beer	1
+garlic dipping sauce	1
+feed	1
+pimento	1
+ice tea	1
+spinach	1
+draft	1
+green sauce	1
+tidbit	1
+hazelnut	1
+syrup	1
+coleslaw	1
+fast food	1
+pastry	1
+red meat	1
+clove	1
+tossed salad	1
+crab cake	1
+hollandaise sauce	1
+gyro	1
+brew	1
+turnover	1
+roasted red pepper	1
+chowder	1
+shellfish	1
+chocolate pudding	1
+celery	1
+rice soup	1
+pork cooked	1
+pie crust	1
+chickpea	1
+spanish tortilla	1
+liquor	1
+brazil	1
+refresher	1
+pork chop	1
+glaze	1
+chicken wing	1
+concentrate	1
+kosher	1
+cod	1
+rose	1
+jello	1
+patty	1
+olive oil	1
+scallop	1
+dietary	1
+fresh food	1
+manzanilla	1
+sweet roll	1
+stuffed tomato	1
+mushroom	1
+liver	1
+chile	1
+duck breast	1
+crumb	1
+matzah	1
+stuffing	1
+broth	1
+sushi	1
+old fashioned	1
+macadamia	1
+rib	1
+toasted almond	1
+potato mash	1
+demitasse	1
+criollo	1
+tuna	1
+burrito	1
+baked good	1
+steamed	1
+pimiento	1
+gazpacho soup	1
+roast beef	1
+board	1
+flavoring	1
+iced coffee	1
+ratatouille	1
+manhattan	1
+crusty bread	1
+cookout	1
+baked potato	1
+rabbit food	1
+meatloaf	1
+butterscotch	1
+ice	1
+ration	1
+stuffed pepper	1
+stew	1
+slow roasted pork	1
+creme brulee	1
+goody	1
+ham croquetas	1
+schnapps	1
+sop	1
+custard	1
+grub	1
+wad	1
+mushroom gravy	1
+poached chicken	1
+gluten	1
+sea bass	1
+bun	1
+nut	1
+side order	1
+beef empanadas	1
+apricot	1
+bean soup	1
+crumble	1
+twist	1
+bechamel	1
+baguette	1
+lemon	1
+mayonnaise	1
+wine sauce	1
+diet	1
+brandy	1
+navy bean	1
+mamey	1
+mango salsa	1
+aguacate	1
+fruit salad	1
+mash	1

@@ -1,0 +1,572 @@
+food	count
+beer	312
+sandwich	111
+irish	98
+salad	85
+pizza	80
+cheese	49
+bread	42
+chip	35
+wine	35
+hummus	35
+burger	33
+coffee	28
+orzo	26
+fish chip	25
+brew	24
+wing	23
+dessert	22
+whiskey	22
+chicken	20
+stick	19
+draft	19
+pie	19
+pear	19
+guinness	18
+corned beef	17
+cocktail	17
+cabbage	17
+tomato	17
+steak	17
+dip	16
+water	16
+heart	16
+alcohol	16
+fish	16
+prosciutto	14
+bacon	14
+soup	14
+meat	14
+pita	14
+olive	13
+fig	13
+sauce	13
+potato	13
+ale	12
+draft beer	12
+grub	12
+scotch	12
+bloody mary	11
+brie	11
+filling	11
+spinach	11
+shepherd pie	11
+beef	11
+roll	11
+wrap	11
+liquor	11
+dressing	10
+cider	10
+mozzarella	10
+board	10
+vodka	9
+lamb	9
+espresso	9
+snack	9
+turkey	9
+mushroom	9
+ice	9
+spicy	9
+beverage	9
+round	8
+martini	8
+orange	8
+pesto	8
+jam	8
+roast beef	8
+shrimp	8
+diet	8
+french fry	7
+feta	7
+artichoke	7
+soda	7
+veggie	7
+mashed potato	7
+cod	7
+spirit	7
+split	7
+tuna	7
+onion	7
+tea	6
+sangria	6
+creamy	6
+chocolate	6
+meatball	6
+latte	6
+taco	6
+egg	6
+stout	6
+ice cream	6
+sweet potato	6
+chipotle	6
+patty	6
+chili	6
+mayo	6
+cranberry	6
+curry	6
+flatbread	6
+filet	6
+coke	6
+chicken sandwich	6
+gorgonzola	6
+artichoke heart	6
+skin	5
+booze	5
+punch	5
+greek salad	5
+honey	5
+slaw	5
+irish whiskey	5
+topping	5
+cheesecake	5
+dipping sauce	5
+cuban sandwich	5
+rib	5
+vegetable	5
+smoked	5
+roasted	5
+cooler	5
+pepper	5
+salmon	5
+pasta	5
+strawberry	5
+tomato soup	5
+milk	4
+jack	4
+garlic bread	4
+sausage	4
+calamari	4
+sweet onion	4
+bourbon	4
+pickle	4
+hamburger	4
+neck	4
+croissant	4
+mojito	4
+cole	4
+walnut	4
+stock	4
+ice tea	4
+coconut	4
+seafood	4
+roasted red pepper	4
+comfort food	4
+goat cheese	4
+bean	4
+batter	4
+smoked salmon	4
+mixed drink	4
+ciabatta	4
+garlic	4
+horseradish	4
+lager	4
+bisque	4
+leftover	4
+strong drink	4
+bubble	4
+bun	4
+spice	4
+topped	4
+draught	4
+roasted pepper	3
+mac cheese	3
+potato chip	3
+spinach salad	3
+edible	3
+brain	3
+cupcake	3
+chuck	3
+olive tapenade	3
+side dish	3
+raisin	3
+irish soda bread	3
+turf	3
+relish	3
+tom	3
+sausage roll	3
+coleslaw	3
+red pepper	3
+hard liquor	3
+gyro	3
+corn beef	3
+salt	3
+tequila	3
+nut	3
+libation	3
+beet	3
+dried tomato	3
+focaccia	3
+chorizo	3
+collar	3
+butter	3
+pasta salad	3
+apple	3
+ham	3
+rose	3
+lobster	3
+cottage pie	3
+raspberry	3
+champ	3
+side order	3
+cake	3
+cream	3
+paddy	3
+mustard	3
+mash	3
+buffalo	3
+green pepper	2
+turkey club sandwich	2
+couscous	2
+margarita	2
+almond	2
+spaghetti	2
+nacho	2
+hash	2
+brown bread	2
+herb	2
+mussel	2
+sake	2
+blueberry	2
+latke	2
+pecan	2
+shoot	2
+malt	2
+sour	2
+beef stew	2
+quesadilla	2
+macaroni cheese	2
+banger	2
+business lunch	2
+thigh	2
+potato skin	2
+flour	2
+risotto	2
+roast	2
+white chocolate	2
+cornbread	2
+bass	2
+horseradish sauce	2
+oktoberfest	2
+pepperoni	2
+reuben	2
+syrup	2
+soda bread	2
+banana	2
+cheese pizza	2
+cucumber	2
+pastry	2
+zucchini	2
+watermelon	2
+burrata	2
+sugar	2
+pumpkin	2
+pastrami	2
+gem	2
+iced tea	2
+pretzel	2
+caramel	2
+bread butter pudding	2
+champagne	2
+feta cheese	2
+little gem	2
+onion ring	2
+pea guacamole	2
+balsamic	2
+parsley	2
+savory	2
+scotch whiskey	2
+pulled pork	2
+bruschetta	2
+vanilla	2
+cracker	2
+challah	2
+sushi	2
+old fashioned	2
+absinthe	2
+concoction	2
+oil	2
+fruit	2
+antipasto	2
+tapenade	2
+vinaigrette	2
+sour cream	2
+teriyaki	2
+candy	2
+pepperoni pizza	2
+pea	2
+porter	2
+rue	2
+tongue	2
+breakfast burrito	2
+bubbly	2
+cheese sandwich	2
+gin	2
+fish fry	2
+gluten	2
+murphy	2
+bread pudding	2
+draught beer	2
+sirloin	2
+twist	2
+baguette	2
+lemon	2
+whip	2
+chicken breast	2
+sweetening	1
+tuna fish	1
+chicken taco	1
+italian style	1
+brie sandwich	1
+cut meat	1
+garlic salt	1
+black olive	1
+chocolate cake	1
+poultry	1
+difference	1
+asparagus	1
+hot drink	1
+pork	1
+brill	1
+marinade	1
+black pudding	1
+table wine	1
+fillet	1
+toast	1
+leg	1
+pepper steak	1
+new york strip	1
+frosting	1
+tartar sauce	1
+spiced	1
+soldier	1
+chocolate chip cookie	1
+lasagna	1
+cinnamon	1
+guacamole	1
+tuxedo	1
+onion roll	1
+duck	1
+caipirinha	1
+lime	1
+saki	1
+humus	1
+parkin	1
+drinkable	1
+drip coffee	1
+starter	1
+whisky	1
+autumn vegetable	1
+alcoholic drink	1
+green pea	1
+fried potato	1
+chocolate sauce	1
+carrot	1
+beet green	1
+fudge	1
+noodle soup	1
+grog	1
+salsa	1
+mold	1
+beef tenderloin	1
+red wine	1
+muffin	1
+dough	1
+chicken quesadilla	1
+rascal	1
+cola	1
+avocado	1
+bbq chicken	1
+wasabi	1
+ketchup	1
+finger food	1
+waffle	1
+mincemeat	1
+soy	1
+turnip	1
+kahlua	1
+strawberry ice cream	1
+riesling	1
+pigeon	1
+tiramisu	1
+sparkle	1
+swiss cheese	1
+baked macaroni	1
+mamma mia	1
+salad leaf	1
+lollipop	1
+ramekin	1
+takeout	1
+chilly	1
+pudding	1
+malt vinegar	1
+lettuce	1
+cranberry juice	1
+bleu	1
+prickly pear	1
+tuna tartare	1
+nutrition	1
+pinot noir	1
+western	1
+kabob	1
+vodka martini	1
+breadstick	1
+solid food	1
+haddock	1
+cheese dip	1
+dirty martini	1
+potato wedge	1
+pork belly	1
+love rock	1
+bagel	1
+butter sauce	1
+surf	1
+godfather	1
+crab cake	1
+tomato bruschetta	1
+buffet	1
+brioche	1
+rack lamb	1
+peppercorn	1
+oyster	1
+hot dog	1
+irish potato	1
+pineapple	1
+bell pepper	1
+sage	1
+cat food	1
+brine	1
+cucumber sandwich	1
+caper	1
+key lime	1
+cheeseburger	1
+refreshment	1
+celery	1
+rice	1
+cappuccino	1
+morsel	1
+flatbread pizza	1
+chocolate syrup	1
+herbal	1
+cream cheese icing	1
+chutney	1
+bay	1
+apricot	1
+grilled chicken	1
+shake	1
+club sandwich	1
+glaze	1
+chicken wing	1
+yogurt	1
+barbeque	1
+chili pepper	1
+pumpernickel bread	1
+curry sauce	1
+pear salad	1
+concentrate	1
+french onion	1
+barbecue sauce	1
+fried egg	1
+corn chip	1
+instant	1
+orange juice	1
+jelly	1
+cob	1
+cherry	1
+puff	1
+swallow	1
+basil oil	1
+sausage pizza	1
+pancake	1
+ice water	1
+crab leg	1
+flavoring	1
+scallop	1
+dietary	1
+souffle	1
+java	1
+bitter	1
+cognac	1
+basil	1
+white meat	1
+kaiser roll	1
+liver	1
+chile	1
+digger	1
+onion bread	1
+salad green	1
+buffalo wing	1
+jerry	1
+tater	1
+short rib	1
+parmesan	1
+irish stew	1
+green onion	1
+steamed	1
+red hot	1
+cheddar	1
+apple cake	1
+sweet corn	1
+cilantro	1
+cayenne	1
+marzipan	1
+alcoholic beverage	1
+piece de resistance	1
+maple syrup	1
+iceberg lettuce	1
+crusty bread	1
+caesar salad	1
+tomatillo	1
+birthday cake	1
+baked potato	1
+green olive	1
+sundried tomato	1
+fondue	1
+balsamic dressing	1
+cheese bread	1
+truffle	1
+ham egg	1
+pasty	1
+wheat	1
+crouton	1
+rum	1
+corn	1
+stew	1
+choc	1
+pt	1
+oatmeal	1
+dark rum	1
+pickled onion	1
+jimmy	1
+marshmallow	1
+basil soup	1
+tenderloin	1
+mocha	1
+refried bean	1
+tuna salad	1
+pilsner	1
+wheat berry	1
+parsnip	1
+flourless chocolate cake	1
+sea bass	1
+marinara	1
+goose	1
+hot chocolate	1
+marmalade	1
+chicken pot pie	1
+bbq sauce	1
+grass	1
+condiment	1
+shin	1
+soda water	1
+sloppy joe	1
+swill	1
+rock lobster	1
+tomato sauce	1
+cream cheese	1
+mayonnaise	1
+manhattan	1
+cornish pasty	1
+gorgonzola salad	1
+sardine	1
+jacket	1
+pilaf	1
