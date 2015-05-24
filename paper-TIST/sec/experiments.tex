@@ -1,0 +1,77 @@
+%!TEX root = ../tist-paper.tex
+\section{Experiments} \label{sec:experiments} 
+% ------------------------------------------- %
+\todo{
+\begin{itemize} % \Checkmark or \XSolidBrush
+    \item[\XSolidBrush] recommendation approaches:
+        \begin{itemize}
+        \item[\XSolidBrush] popularity
+        \item[\XSolidBrush] serendipity
+        \item[\XSolidBrush] mix (business$-$profile, user$-$profile)
+        \item[\XSolidBrush] CF
+        \item[\XSolidBrush] by cities/cultures if analysis makes sense
+        \end{itemize}
+    \item[\XSolidBrush] matching techniques:
+        \begin{itemize}
+        \item[\XSolidBrush] using only dishes
+        \item[\XSolidBrush] using dishes $+$ ingredients
+        \item[\XSolidBrush] taking a subset of the graph
+        \item[\XSolidBrush] word2vec
+        \item[\XSolidBrush] tf$-$idf/bm25 
+        \end{itemize}
+    \item[\XSolidBrush] evaluation metrics:
+        \begin{itemize}
+        \item[\XSolidBrush] F$-$score
+        \item[\XSolidBrush] Precision
+        \item[\XSolidBrush] nDCG (if ranking matters)
+        \end{itemize}
+\end{itemize}
+}
+
+Which is the ground truth ?
+Since we have to perform different experiments we need to discuss this very carefully..
+\todo{which is the best evaluation metric? precision? recall? f-1? and why..}
+
+%=======================================
+\subsection*{Emotions Prediction} \label{sec:experiments:emotions} 
+%=======================================
+The goal here is to prove how good are the emotions. They should behave in line with the starts. However we can also find some ranges of no. of posemo and no. of starts. However this Section motivate us to go to the next one.
+\begin{itemize}
+\item Which is the predictive power of the emotions? How do they behave compared to the stars?
+\item Experiments (train/test set) on the efficiency of our emotions recognition approach
+\end{itemize}
+
+
+%=======================================
+\subsection*{Menu Prediction} \label{sec:experiments:menu} 
+%=======================================
+The goal here is to predict what the user is going to eat, or in other word, which will be his menu. This is very challenging and it seems a very innovative contribution. Anyway in this case we use the sentence-sentiments to have a rate for each food the user ate in the past. Since we proved before that the sentiments are working similarly as the starts, we use them in a more fine-grade since we can extract the sentiment (\ie, rate) of each sentence. \\
+
+Process:
+\begin{itemize}
+\item Build a user menu profile (with the things he ate in the paste - no ratings!).
+\item For each restaurant build a rated menu (by sentence sentiments), where for each food we have the frequency and the avg-rate.
+\item Split the dataset into train and test set in a smart way: be sure the user in the test set made \textit{enough} reviews in the train set and in both of the set they write something about food.
+\item Try to predict which things the user are going to consume in the test set.
+\end{itemize}
+
+
+% %=======================================
+% \subsection*{EmoMenu-Based Recommender} \label{sec:experiments:emomenu} 
+% %=======================================
+% \begin{itemize}
+% \item How we integrate the previous two recommenders into a third one that keep into account both the features
+% \end{itemize}
+
+
+
+% %=======================================
+% \subsection*{Baseline-..} \label{sec:experiments:baseline} 
+% %=======================================
+% What could we use here?
+% \begin{itemize}
+% \item Stars-based
+% \item Review-based
+% \item CheckIn-based
+% \end{itemize}
+

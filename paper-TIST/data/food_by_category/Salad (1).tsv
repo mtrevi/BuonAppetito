@@ -1,0 +1,334 @@
+food	count
+salad	150
+soup	87
+tomato	73
+pizza	59
+buffet	48
+bread	35
+pasta	35
+beer	27
+dessert	26
+muffin	23
+chicken	23
+topping	23
+veggie	22
+cheese	17
+dressing	16
+ice cream	14
+meat	13
+fruit	11
+frozen yogurt	10
+strawberry	10
+mac cheese	10
+lettuce	10
+chocolate	10
+salad dressing	10
+clam chowder	9
+wrap	9
+blueberry muffin	8
+water	8
+soda	8
+brownie	7
+baked potato	7
+chili	7
+sweet potato	7
+vegetable	7
+sandwich	7
+potato	7
+sauce	6
+bacon	6
+nacho	6
+chip	6
+beverage	6
+smoothie	5
+orange	5
+chicken noodle soup	5
+fast food	5
+chocolate chip cooky	5
+jello	5
+butter	5
+stick	5
+focaccia bread	5
+heart	5
+noodle	5
+pasta salad	5
+wing	5
+steak	4
+cornbread	4
+grilled chicken	4
+fresh food	4
+chicken salad	4
+tomato salad	4
+ice	4
+yogurt	4
+calzone	4
+stock	4
+tea	4
+banana	4
+lemonade	4
+cake	4
+spicy	4
+lemon	4
+tuna	4
+broccoli salad	3
+milk	3
+pasta dish	3
+batter	3
+won ton	3
+lemon cream	3
+burger	3
+crouton	3
+root beer	3
+corn	3
+beef	3
+goody	3
+chicken soup	3
+berry	3
+pepperoni	3
+parfait	3
+tarragon	3
+fish chip	3
+vanilla	3
+biscuit	3
+dip	3
+honey	3
+cobbler	3
+shrimp	3
+cream	3
+roll	3
+taco	3
+broccoli	3
+bell pepper	2
+steamed	2
+cherry tomato	2
+artichoke	2
+comfort food	2
+caper	2
+snack	2
+sugar	2
+tossed salad	2
+mayo	2
+onion	2
+cider	2
+filling	2
+almond	2
+potato salad	2
+tuna salad	2
+macaroni cheese	2
+jalapeno	2
+spinach	2
+green salad	2
+pepper	2
+fish	2
+cookie	2
+diet	2
+chocolate brownie	2
+choc	2
+peanut butter	2
+feed	2
+apple	2
+turkey	2
+french bread	2
+syrup	2
+mushroom	2
+hot chocolate	2
+broth	2
+hamburger	2
+cheese pizza	2
+pepperoni pizza	2
+juice	2
+pickle	2
+topped	2
+macaroni salad	2
+tomato soup	2
+scrambled egg	2
+tapioca pudding	2
+waffle	2
+wonton	2
+buffalo	2
+green onion	2
+egg	2
+chowder	1
+kale	1
+noodle stir fry	1
+dough	1
+skin	1
+tilapia	1
+rosemary potato	1
+bitter	1
+ham	1
+bleu	1
+sprout	1
+melon	1
+red pepper	1
+jam	1
+board	1
+margarita	1
+dill pickle	1
+kidney bean	1
+feta cheese	1
+coffee	1
+wheat beer	1
+cottage cheese	1
+starch	1
+honey mustard dressing	1
+banana bread	1
+bean	1
+molasses	1
+stout	1
+draft beer	1
+difference	1
+ketchup	1
+gem	1
+sourdough bread	1
+fudge	1
+candy	1
+pea	1
+dietary	1
+caramel	1
+roast	1
+french onion soup	1
+nosh	1
+ice tea	1
+caesar salad	1
+rosemary	1
+orzo	1
+greek salad	1
+duck	1
+fettuccini	1
+sprinkle	1
+mashed potato	1
+paddy	1
+chocolate chip cookie	1
+scratching	1
+garlic bread	1
+sausage	1
+alcohol	1
+coral	1
+spaghetti meatball	1
+creamy chicken	1
+various topping	1
+tap water	1
+celery stick	1
+herbal tea	1
+crab leg	1
+barbeque	1
+chili pepper	1
+fiber	1
+wheat	1
+chinese chicken	1
+rue	1
+drinking water	1
+sweet cherry	1
+chilli	1
+banana smoothie	1
+cheese soup	1
+cookie dough	1
+raisin	1
+oatmeal	1
+round	1
+chocolate pudding	1
+blueberry	1
+lasagna	1
+chive	1
+garlic	1
+curry	1
+sausage pizza	1
+wild mushroom soup	1
+radish	1
+tofu	1
+soy	1
+mocha	1
+champ	1
+potato bread	1
+fixing	1
+gumbo	1
+iceberg lettuce	1
+hoagie	1
+guinness	1
+balsamic	1
+brisket	1
+egg salad	1
+blue cheese	1
+creamy	1
+caramel sauce	1
+draft	1
+walnut salad	1
+cauliflower	1
+beet	1
+focaccia	1
+white meat	1
+drinkable	1
+gluten	1
+coke	1
+roasted almond	1
+french dressing	1
+wild rice	1
+iced tea	1
+nut	1
+olive	1
+roast turkey	1
+kabob	1
+starter	1
+spice	1
+shoot	1
+teriyaki	1
+cracker	1
+buttermilk	1
+stuffing	1
+corn syrup	1
+carrot	1
+chicken pot pie	1
+bean soup	1
+cinnamon roll	1
+pumpkin	1
+fruit bar	1
+sweet pickle	1
+cornbread muffin	1
+irish	1
+nutrition	1
+shepherd pie	1
+stir fried	1
+pie	1
+lentil soup	1
+granola	1
+penne	1
+fettuccine	1
+prawn	1
+salad green	1
+martini	1
+french toast	1
+fried noodle	1
+concoction	1
+vegetable soup	1
+potato soup	1
+blue cheese dressing	1
+root beer float	1
+macaroni	1
+split	1
+black bean	1
+bottled water	1
+cocktail	1
+balsamic dressing	1
+cheesecake	1
+noodle salad	1
+cranberry	1
+side dish	1
+wasabi	1
+quinoa	1
+raspberry vinaigrette	1
+cucumber	1
+melon ball	1
+salsa	1
+baked good	1
+hot dog	1
+seafood	1
+salt	1
+chicken stew	1
+boiled egg	1
+bloody mary	1
+pineapple	1
+brew	1
+wine	1
+navy bean	1
+artichoke heart	1

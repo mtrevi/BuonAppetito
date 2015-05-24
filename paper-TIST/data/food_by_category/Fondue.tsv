@@ -1,0 +1,388 @@
+food	count
+dessert	121
+fondue	113
+cheese	86
+crepe	74
+chocolate	66
+salad	62
+meat	58
+wine	48
+cheese fondue	46
+chocolate fondue	41
+veggie	29
+chicken	29
+apple	26
+bread	26
+sauce	25
+strawberry	25
+broth	23
+dip	22
+shrimp	20
+rice	18
+mushroom	17
+brownie	16
+spinach	14
+beer	14
+pork	13
+artichoke	13
+caramel	13
+steak	13
+bacon	12
+savory	12
+filling	12
+banana	12
+cheesecake	12
+marshmallow	12
+milk chocolate	11
+pizza	11
+dark chocolate	11
+beef	11
+garlic	11
+buckwheat	10
+martini	10
+fruit	10
+toast	10
+champagne	10
+pound cake	9
+coq au vin	9
+salmon	9
+lobster tail	9
+split	9
+cheddar	9
+lobster	9
+sirloin	9
+raclette	8
+stick	8
+sandwich	8
+dipping sauce	8
+ham	8
+potato	8
+dressing	7
+onion	7
+filet	7
+lemon	7
+swiss cheese	6
+seasoning	6
+egg	6
+graham cracker	6
+coffee	6
+white chocolate	6
+alcohol	6
+butter	6
+seafood	6
+swiss cheese fondue	6
+vegetable	6
+pasta	6
+pine nut	5
+difference	5
+white wine	5
+herb	5
+water	5
+cocktail	5
+tomato	5
+granny smith	5
+roquefort	5
+rosemary	5
+burgundy wine	5
+smoked salmon	5
+peanut butter	5
+oil	5
+chocolate dessert	5
+broccoli	5
+cream puff	5
+topped	5
+teriyaki	5
+caesar salad	5
+ice	5
+blue cheese	5
+cheddar cheese	5
+milk	4
+creamy	4
+pecan	4
+starter	4
+sour	4
+heart	4
+pork tenderloin	4
+salted caramel	4
+ratatouille	4
+herb butter	4
+feed	4
+filet mignon	4
+sweet potato	4
+pineapple	4
+gem	4
+raw meat	4
+cauliflower	4
+wild rice	4
+concoction	4
+wrap	4
+gluten	4
+spice	4
+dill	4
+cream	4
+gorgonzola	4
+tea	3
+pate	3
+carrot	3
+mushroom salad	3
+banana foster	3
+iced tea	3
+walnut	3
+chocolate ganache	3
+feast	3
+amaretto	3
+scallion	3
+salt	3
+sugar	3
+gruyere	3
+goat cheese	3
+bleu	3
+liquor	3
+whiskey	3
+puff	3
+scallop	3
+fondu	3
+sour cream	3
+raspberry	3
+tenderloin	3
+peppercorn	3
+bouillon	3
+baguette	3
+saffron	3
+whipped cream	3
+mustard	3
+pear	3
+diet	3
+beverage	3
+parmesan	2
+chocolate brownie	2
+vegetable broth	2
+jack	2
+dill sauce	2
+sausage	2
+pancake	2
+cheese toast	2
+duck	2
+pickle	2
+honey	2
+raspberry vinaigrette	2
+dough	2
+citrus	2
+marshmallow brownie	2
+side dish	2
+lettuce	2
+ice tea	2
+french bread	2
+nut	2
+cheese dip	2
+fresh herb	2
+mace	2
+salad dressed	2
+snack	2
+salted caramel sauce	2
+bay	2
+grilled chicken	2
+glaze	2
+yogurt	2
+lettuce wrap	2
+ravioli	2
+french onion soup	2
+cracker	2
+beef tenderloin	2
+smoked	2
+rose	2
+leek	2
+dietary	2
+creme brulee	2
+strawberry cheesecake	2
+wheat	2
+leftover	2
+oreo	2
+mustard vinaigrette	2
+cake	2
+peach	2
+roll	2
+tart	2
+court bouillon	2
+chicken breast	2
+buffalo	2
+potato pizza	1
+grape	1
+peanut	1
+dumpling	1
+sparkling wine	1
+margarita	1
+asparagus	1
+prosciutto	1
+grilled goat cheese	1
+black pepper	1
+burger	1
+marinade	1
+garlic bread	1
+chicken salad	1
+baby carrot	1
+caper	1
+pumpernickel	1
+new york strip	1
+mozzarella	1
+vinegar	1
+cinnamon	1
+mussel	1
+sea salt	1
+sake	1
+spinach salad	1
+crab	1
+hot pot	1
+shoot	1
+chocolate sauce	1
+warm chocolate	1
+canola oil	1
+strawberry daiquiri	1
+vodka	1
+jambon	1
+hamburger	1
+dry sherry	1
+dripping	1
+bittersweet chocolate	1
+toasted almond	1
+apple pastry	1
+taco	1
+salsa	1
+onion tart	1
+salad green	1
+beef stock	1
+batter	1
+charcuterie	1
+sirloin steak	1
+brie	1
+dab	1
+blini	1
+garlic butter	1
+ketchup	1
+fish	1
+fruit cake	1
+prawn	1
+goose	1
+crescent roll	1
+ice cream	1
+strawberry ice cream	1
+variety meat	1
+caramel apple	1
+mate	1
+heavy cream	1
+welsh rarebit	1
+nutmeg	1
+sea scallop	1
+espresso martini	1
+pepperoni	1
+emmenthaler	1
+bitter	1
+kiwi	1
+pinot noir	1
+shallot	1
+iceberg	1
+seared scallop	1
+cooking oil	1
+beef fondue	1
+poulet	1
+mint	1
+crape	1
+wheat flour	1
+salad nicoise	1
+sherry	1
+topping	1
+quick dessert	1
+turnover	1
+sage	1
+green tea	1
+booze	1
+comfort food	1
+jam	1
+romaine	1
+bourbon	1
+toffee	1
+golden delicious	1
+morsel	1
+red wine	1
+gratin	1
+cheesecake brownie	1
+pretzel	1
+lemonade	1
+green salad	1
+mouthful	1
+pumpernickel bread	1
+medallion	1
+french onion	1
+brat	1
+grain	1
+berry	1
+cherry	1
+chocolate ice cream	1
+kirsch	1
+mustard powder	1
+raw vegetable	1
+balsamic	1
+buttermilk	1
+cream cheese	1
+decaf	1
+liver	1
+tartiflette	1
+portobello mushroom	1
+steamed potato	1
+ail	1
+stuffing	1
+sushi	1
+chicken caesar salad	1
+lager beer	1
+riesling	1
+tuna	1
+poultry	1
+noodle	1
+onion soup	1
+vinaigrette	1
+green onion	1
+steamed	1
+stout	1
+loaf	1
+roasted	1
+romaine lettuce	1
+gruyere cheese	1
+appetiser	1
+butternut squash ravioli	1
+onion ring	1
+cooler	1
+red meat	1
+blackberry	1
+vanilla essence	1
+cider	1
+dessert wine	1
+cheese bread	1
+root beer	1
+ham egg	1
+pepper	1
+crouton	1
+rum	1
+goody	1
+plum	1
+brandy	1
+cheese sauce	1
+chow	1
+curry	1
+tofu	1
+foie gras	1
+cheese sandwich	1
+caramel sauce	1
+spicy	1
+cream sauce	1
+cheddar fondue	1
+hot chocolate	1
+curry sauce	1
+vegetable chip	1
+croque monsieur	1
+fixing	1
+whipping cream	1
+red carpet	1
+fontina cheese	1
+cold cut	1
+atlantic salmon	1
+artichoke heart	1
