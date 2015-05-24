@@ -12,4 +12,9 @@ Michele Trevisiol, Luca Chiarandini, Ricardo Baeza-Yates “[Buon Appetito - Rec
 <h6>ToDo</h6>
 * Research similar work for food-word detection and recognition
 * Work on the food-item matching 
-* Build user and business profile——think how to split it by time for train, validation and test set (CV)
+* Build user and business profile: think how to split it by time for train, validation and test set (CV)
+
+
+<h6>Add References</h6>
+* Flavor network and the principles of food pairing, 2011
+* Comparing and combining snetiment analysis methods, 2013
