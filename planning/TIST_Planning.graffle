@@ -46,13 +46,61 @@
 	<key>Creator</key>
 	<string>Michele Trevisiol</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>FileType</key>
 	<string>flat</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
 	<array>
+		<dict>
+			<key>Bounds</key>
+			<string>{{66.585129, 498.44138}, {132, 14}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FitText</key>
+			<string>YES</string>
+			<key>Flow</key>
+			<string>Resize</string>
+			<key>ID</key>
+			<integer>72</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Pad</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1347\cocoasubrtf570
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs24 \cf0 RECSYS ALGORITHMS}</string>
+				<key>VerticalPad</key>
+				<integer>0</integer>
+			</dict>
+			<key>Wrap</key>
+			<string>NO</string>
+		</dict>
 		<dict>
 			<key>Class</key>
 			<string>LineGraphic</string>
@@ -395,7 +443,7 @@
 			<integer>48</integer>
 			<key>Points</key>
 			<array>
-				<string>{438.43082, 517.44122}</string>
+				<string>{438.65036, 516.992}</string>
 				<string>{405.14029, 585.55878}</string>
 			</array>
 			<key>Style</key>
@@ -428,7 +476,7 @@
 			<integer>47</integer>
 			<key>Points</key>
 			<array>
-				<string>{342.29108, 517.43481}</string>
+				<string>{342.0589, 516.992}</string>
 				<string>{355.78555, 543.17297}</string>
 				<string>{374.75842, 585.55157}</string>
 			</array>
@@ -485,7 +533,7 @@
 			<array>
 				<string>{360.40384, 393.36508}</string>
 				<string>{358.72946, 395.24139}</string>
-				<string>{337.38028, 452.53946}</string>
+				<string>{337.20572, 453.008}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -519,7 +567,7 @@
 			<array>
 				<string>{418.24075, 393.36462}</string>
 				<string>{420.02521, 395.35919}</string>
-				<string>{441.87982, 452.54092}</string>
+				<string>{442.05832, 453.00797}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -561,6 +609,18 @@
 						<key>r</key>
 						<string>0.98626</string>
 					</dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Fuzziness</key>
+					<real>24.192741394042969</real>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
 				</dict>
 			</dict>
 			<key>Text</key>
@@ -600,6 +660,18 @@
 						<key>r</key>
 						<string>0.98626</string>
 					</dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Fuzziness</key>
+					<real>32</real>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
 				</dict>
 			</dict>
 			<key>Text</key>
@@ -695,7 +767,7 @@
 			<integer>38</integer>
 			<key>Points</key>
 			<array>
-				<string>{155.48686, 292.94452}</string>
+				<string>{155.25792, 292.5}</string>
 				<string>{185.76784, 351.73901}</string>
 				<string>{323.28607, 357.9967}</string>
 			</array>
@@ -849,8 +921,8 @@
 			<integer>34</integer>
 			<key>Points</key>
 			<array>
-				<string>{199.18475, 271}</string>
-				<string>{323.28552, 271}</string>
+				<string>{198.68475, 271}</string>
+				<string>{323.28555, 271}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -882,8 +954,8 @@
 			<integer>33</integer>
 			<key>Points</key>
 			<array>
-				<string>{347.34229, 210.90845}</string>
-				<string>{374.29922, 249.0873}</string>
+				<string>{347.23727, 210.90947}</string>
+				<string>{373.99261, 249.09}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -917,8 +989,8 @@
 			<integer>32</integer>
 			<key>Points</key>
 			<array>
-				<string>{429.9631, 210.91559}</string>
-				<string>{404.42746, 249.08867}</string>
+				<string>{429.85828, 210.91457}</string>
+				<string>{404.12149, 249.08597}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1039,7 +1111,7 @@
 			<key>Points</key>
 			<array>
 				<string>{144.18478, 215}</string>
-				<string>{144.18477, 249}</string>
+				<string>{144.18477, 249.5}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1114,6 +1186,18 @@
 						<key>r</key>
 						<string>0.621646</string>
 					</dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Fuzziness</key>
+					<real>32</real>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
 				</dict>
 			</dict>
 			<key>Text</key>
@@ -1357,7 +1441,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2015-06-04 21:09:42 +0000</string>
+	<string>2015-06-05 11:11:05 +0000</string>
 	<key>Modifier</key>
 	<string>Michele Trevisiol</string>
 	<key>NotesVisible</key>
