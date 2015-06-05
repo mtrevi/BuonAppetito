@@ -5,8 +5,7 @@ Extension of the first work on menu recommendation.
 Michele Trevisiol, Luca Chiarandini, Ricardo Baeza-Yates “[Buon Appetito - Recommending Personalized Menus](http://www.micheletrevisiol.com/papers/ht2014_trevisiol.pdf)”, September 1 – 4 2014, Santiago, Chile, ACM conference on Hypertext and Social Media, [HT2014](http://ht.acm.org/ht2014/)
 
 <h6>Planning</h6>
-![Planning](TIST_Planning.png)
-<!-- xarabas.github.com/BuonAppetito/TIST_Planning.png) -->
+![Planning](planning/TIST_Planning.png)
 
 
 <h6>iPython Notebook</h6>
