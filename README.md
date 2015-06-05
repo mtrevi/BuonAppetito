@@ -5,10 +5,10 @@ Extension of the first work on menu recommendation.
 Michele Trevisiol, Luca Chiarandini, Ricardo Baeza-Yates “[Buon Appetito - Recommending Personalized Menus](http://www.micheletrevisiol.com/papers/ht2014_trevisiol.pdf)”, September 1 – 4 2014, Santiago, Chile, ACM conference on Hypertext and Social Media, [HT2014](http://ht.acm.org/ht2014/)
 
 <h6>Repository Structure</h6>
+* `planning` : contains the diagrams
 * `data` : contains the data in RAW and post-processed format
-* `src` : contains all the modules explained in the planning diagram with a simple README that explains the basic functionalities
 * `model` : contains the models or objects that are called by different modules
-* `planning` : it simply contains the diagrams
+* `src` : contains all the modules explained in the planning diagram with a simple README that explains the basic functionalities
 
 <h6>Planning</h6>
 ![Planning](planning/TIST_Planning.png)
