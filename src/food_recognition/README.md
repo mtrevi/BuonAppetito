@@ -8,6 +8,15 @@ The Food-Words Recognition module interacts with different modules that manage t
 
 ```
 def get_food_items( text ):
-    @input text: a string (might be a sentence or a group of sentences)
-    @output list(food_items): returns a list of food_item. Each food_items contains food_id, food_name and type (i.e., ingredient or dish)
+    @input text: 
+        receives a string (might be a sentence or a group of sentences)
+    @output list(food_items): 
+        returns a list of food_item. 
+```
+
+A food_item is an object that contains (at least):
+```
+* food_id: numerical id
+* food_name: string name
+* type: type of the item (i.e., ingredient or dish)
 ```
