@@ -11,7 +11,7 @@ def get_food_items( text ):
     @input text: 
         receives a string (might be a sentence or a group of sentences)
     @output list(food_items): 
-        returns a list of food_item. 
+        returns a list of food_items 
 ```
 
 A food_item is an object that contains (at least):
