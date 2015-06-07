@@ -8,26 +8,31 @@ __author__ : Michele Trevisiol @trevi
 """
 
 import os
+import sys
 import json
 import codecs
+import configparser
 import cPickle as pickle
 from optparse import OptionParser
 from DataObjects.YelpBusinessData import *
 from DataObjects.YelpReviewData import *
 from DataObjects.YelpUserData import *
 
+sys.path.append("../")
 ##
 parser = OptionParser()
-parser.add_option( '--yBusiness', dest='yBusiness', help='yelp_academic_dataset_business.json' )
-parser.add_option( '--yReview', dest='yReview', help='yelp_academic_dataset_review.json' )
-parser.add_option( '--yUser', dest='yUser', help='yelp_academic_dataset_user.json' )
-parser.add_option( '--outFile', dest='outFile', default='yelp_TYPE.p' )
+parser.add_option( '-c', '--config', 
+  dest='configFile', 
+  default='../BuonAppetito.conf',
+  help='Path of the configuration file')
 ##
 (options, args) = parser.parse_args()
-YBFILE = options.yBusiness
-YRFILE = options.yReview
-YUFILE = options.yUser
-OUTFILE = options.outFile
+CONFILE = options.configFile
+config = configparser.ConfigParser().read(CONFILE)
+YBFILE = config['DataProcessing']['YelpBusiness']
+YRFILE = config['DataProcessing']['YelpReview']
+YUFILE = config['DataProcessing']['YelpUser']
+OUTFILE = config['DataProcessing']['outFile']
 
 
 '''
