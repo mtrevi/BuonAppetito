@@ -9,27 +9,24 @@ __creation__ : Apr 8, 2015
 
 import json
 from optparse import OptionParser
+from ConfigParser import SafeConfigParser
 from nltk import pos_tag, ne_chunk
-from ext.LIWClib.EmotionsLIWClib import *
-from data.food_dataset.trieFinder import *
-from ext.TextProcessingLib.TextProcessing import *
-
 
 ##
 parser = OptionParser()
-parser.add_option( '--foodTrie', dest='foodTrie', \
-  default='data/food_dataset-bbc_menupages-trie.b' )
-parser.add_option( '--yReview', dest='yReview', default='data/yelp_restaurants_review.p' )
-parser.add_option( '--yBusiness', dest='yBusiness', default='data/yelp_restaurants_business.p' )
-parser.add_option( '--yUser', dest='yUser', default='data/yelp_restaurants_users.p' )
-parser.add_option( '--out', dest='outW2V', \
-  default='')
+parser.add_option( '--config', 
+  dest='configFile', 
+  default='../BuonAppetito.conf',
+  help='Path of the configuration file')
 ##
 (options, args) = parser.parse_args()
-FOODTRIEFILE = options.foodTrie
-YRFILE = options.yReview
-YBFILE = options.yBusiness
-YUFILE = options.yUser
+CONFILE = options.configFile
+config = SafeConfigParser()
+config.read(CONFILE)
+YBFILE = config.get('DataProcessing', 'YelpBusiness')
+YRFILE = config.get('DataProcessing', 'YelpReview')
+YUFILE = config.get('DataProcessing', 'YelpUser')
+OUTFILE = config.get('DataProcessing', 'outFile')
 
 
 '''
