@@ -14,10 +14,8 @@ from nltk import pos_tag, ne_chunk
 
 ##
 parser = OptionParser()
-parser.add_option( '--config', 
-  dest='configFile', 
-  default='../BuonAppetito.conf',
-  help='Path of the configuration file')
+parser.add_option( '--config', dest='configFile', 
+  default='../BuonAppetito.conf', help='Path of the configuration file')
 ##
 (options, args) = parser.parse_args()
 CONFILE = options.configFile

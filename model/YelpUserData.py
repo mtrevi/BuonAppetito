@@ -66,7 +66,7 @@ class YelpUser:
     self.review_count = jdata['review_count']
     self.average_stars = jdata['average_stars']
     self.votes = jdata['votes']
-    self.firends = jdata['friends']
+    self.friends = jdata['friends']
     self.elite = jdata['elite']
     self.yelping_since = jdata['yelping_since']
     self.compliments = jdata['compliments']

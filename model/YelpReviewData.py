@@ -9,6 +9,7 @@ __author__ : Michele Trevisiol @trevi
 import sys
 import json
 import codecs
+import sqlite3
 import cPickle as pickle
 
 

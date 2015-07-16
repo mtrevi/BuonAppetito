@@ -14,11 +14,11 @@ import codecs
 import configparser
 import cPickle as pickle
 from optparse import OptionParser
-from DataObjects.YelpBusinessData import *
-from DataObjects.YelpReviewData import *
-from DataObjects.YelpUserData import *
 
-sys.path.append("../")
+sys.path.insert(0, '../../')
+from model.YelpBusinessData import *
+from model.YelpReviewData import *
+from model.YelpUserData import *
 ##
 parser = OptionParser()
 parser.add_option( '-c', '--config', dest='configFile', 
@@ -27,68 +27,52 @@ parser.add_option( '-c', '--config', dest='configFile',
 (options, args) = parser.parse_args()
 CONFILE = options.configFile
 config = configparser.ConfigParser().read(CONFILE)
-YBOFILE = config.get('ProfilesBuilder', 'YelpBusinessObj')
-YROFILE = config.get('ProfilesBuilder', 'YelpReviewObj')
-YUOFILE = config.get('ProfilesBuilder', 'YelpUserObj')
-OUTFILE = config['DataProcessing']['outFile']
+YBOFILE = config.get('ProfilesBuilder','YelpBusinessObj')
+YROFILE = config.get('ProfilesBuilder','YelpReviewObj')
+YUOFILE = config.get('ProfilesBuilder','YelpUserObj')
+#
+OUTUSRFILE = config.get('ProfilesBuilder','outUserObj')
+OUTRSTFILE = config.get('ProfilesBuilder','outRestaurantObj')
+
+
 
 ''' ------------------------- '''
 '''   DEFINE LIWC OBJECT      '''
 ''' ------------------------- '''
-class YelpProfile:
+class YelpProfileBuilder:
 
-   def __init__(self):
-      self.d_businessIds = {} 
+  def __init__(self):
+    self.d_businessIds = {} 
+
+  def load_yelp_data():
+    self.load_yelp_business()
+    self.load_yelp_reviews()
+    self.load_yelp_users()
 
   '''
-  Load/Build Business Yelp Dataset Container.
-  '''
+  Load/Build Business Yelp Dataset Container. '''
   def load_yelp_business():
-    if YBFILE is not None:
-      YB_OUTFILE = OUTFILE.replace('TYPE','restaurants_business')
-      if os.path.exists( YB_OUTFILE ):
-        print '[found] Loading Business Container (%s)' %YB_OUTFILE
-        businessContainer = pickle.load( open( YB_OUTFILE, "rb" ) )
-        print '\t-> loaded %d business' %businessContainer.len()
-      else:
-        print 'Generating Business Container (from: %s)' %YBFILE
-        businessContainer = YelpBusinessContainer()
-        businessContainer.load_dataset( YBFILE, categories=['Restaurant'], verbose=False )
-        print '\t-> loaded %d business (belonging to categories: "restaurant")' %businessContainer.len()
-        ## get stats about categories
-        print '\t-> saving business container to "%s"' %YB_OUTFILE
-        pickle.dump( businessContainer, open( YB_OUTFILE, "wb" ) )
-      ##
-    ''' Extract Dictionary of Business Ids '''
-    print 'Copying Business Ids into a Dictionary'
-    for bid in businessContainer.getIds():
-      if not self.d_businessIds.has_key( bid ):
-        self.d_businessIds[ bid ] = 0
-      self.d_businessIds[ bid ] += 1
-    print '\t-> get %d business ids' %len(self.d_businessIds)
-
-
-  '''
-  Load/Build Review Yelp Dataset Container.
-  '''
-  def load_yelp_review():
-    if YRFILE is not None:
-      YR_OUTFILE = OUTFILE.replace('TYPE','restaurants_review')
-      print 'Generating Review Container (from: %s)' %YRFILE
-      reviewContainer = YelpReviewContainer()
-      discarded = reviewContainer.load_dataset( YRFILE, business_ids=self.d_businessIds, verbose=False )
-      print '\t-> loaded %d reviews (%d discarded)' %(reviewContainer.len(),discarded)
-      ## get stats about categories
-      print '\t-> saving review container (to "%s")' %YR_OUTFILE
-      pickle.dump( reviewContainer, open( YR_OUTFILE, "wb" ) )
-      ##
+    if YBOFILE is not None:
+      print 'Loading Business Container (%s)' %YBOFILE
+      businessContainer = pickle.load( open( YBOFILE, "rb" ) )
+      print '\t-> loaded %d business' %businessContainer.len()
     else:
-      print >> sys.stderr, 'Wrong Declaration of CONFIG FILE'
+      print >> sys.stderr, 'Business Container Not Found in %s' %YBFILE
+  ##
+
+  '''
+  Load/Build Review Yelp Dataset Container. '''
+  def load_yelp_reviews():
+    if YROFILE is not None:
+      print 'Loading Review Container (from: %s)' %YROFILE
+      reviewContainer = pickle.load( open( YROFILE, "rb" ) )
+      print '\t-> loaded %d reviews' %reviewContainer.len()
+    else:
+      print >> sys.stderr, 'Review Container Not Found in %s' %YROFILE
 
 
   '''
-  Load/Build Users Yelp Dataset Container.
-  '''
+  Load/Build Users Yelp Dataset Container. '''
   def load_yelp_users():
     if YUFILE is not None:
       YU_OUTFILE = OUTFILE.replace('TYPE','restaurants_users')
@@ -101,4 +85,8 @@ class YelpProfile:
       pickle.dump( userContainer, open( YU_OUTFILE, "wb" ) )
       ##
     else:
-      print >> sys.stderr, 'Wrong Declaration of CONFIG FILE'
+      print >> sys.stderr, 'User Container Not Found in %s' %YUFILE
+
+
+  '''
+  Parse profiles, get the food-words and extract the sentiments. '''
